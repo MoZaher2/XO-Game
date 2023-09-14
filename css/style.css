@@ -1,0 +1,387 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.main {
+    position: relative;
+}
+
+.cont {
+    width: 498px;
+    height: 450px;
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cont .xo {
+    width: 166px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.7s;
+    cursor: pointer;
+}
+
+.cont .xo:hover {
+    background-color: #777;
+}
+
+.cont .xo p {
+    font-weight: bold;
+    font-size: 90px;
+    user-select: none;
+}
+
+#xo1 {
+    border-right: 5px solid black;
+    border-bottom: 5px solid black;
+    position: relative;
+}
+
+#xo1::before,
+#xo4::before,
+#xo7::before,
+#xo2::before,
+#xo3::before {
+    content: "";
+    position: absolute;
+    height: 7px;
+    top: 50%;
+    left: 14px;
+    background-color: white;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    z-index: 50;
+}
+
+
+@keyframes xo1 {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 290%;
+    }
+}
+
+@keyframes xo2 {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 400%;
+    }
+}
+
+@keyframes xo3 {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 270%;
+    }
+}
+
+#xo2 {
+    border-right: 5px solid black;
+    border-bottom: 5px solid black;
+    border-left: 5px solid black;
+    position: relative;
+}
+
+#xo3 {
+    border-bottom: 5px solid black;
+    border-left: 5px solid black;
+    position: relative;
+}
+
+#xo4 {
+    border-top: 5px solid black;
+    border-right: 5px solid black;
+    border-bottom: 5px solid black;
+    position: relative;
+}
+
+#xo5 {
+    border-top: 5px solid black;
+    border-right: 5px solid black;
+    border-bottom: 5px solid black;
+    border-left: 5px solid black;
+    position: relative;
+}
+
+#xo6 {
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+    border-left: 5px solid black;
+    position: relative;
+}
+
+#xo7 {
+    border-top: 5px solid black;
+    border-right: 5px solid black;
+    position: relative;
+}
+
+#xo8 {
+    border-top: 5px solid black;
+    border-right: 5px solid black;
+    border-left: 5px solid black;
+    position: relative;
+}
+
+#xo9 {
+    border-top: 5px solid black;
+    border-left: 5px solid black;
+    position: relative;
+}
+
+.x {
+    color: #00ffcbd6;
+}
+
+.o {
+    color: #0cf73cde;
+}
+
+/* Enter Name1 */
+.contname1,
+.contname2 {
+    position: absolute;
+    background-color: rgb(0 0 0 / 14%);
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.contname1 .popname,
+.contname2 .popname {
+    background-color: #1976e4;
+    height: 188px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 20px;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.lbl1,
+.lbl2 {
+    font-size: 40px;
+    color: #00dcff;
+    font-weight: bold;
+    user-select: none;
+}
+
+
+#n1,
+#n2 {
+    width: 330px;
+    height: 59px;
+    font-size: 40px;
+    border: none;
+    border-radius: 15px;
+    padding: 5px;
+    font-weight: bold;
+    color: #00dcff;
+}
+
+#n1:focus,
+#n2:focus {
+    outline: none;
+}
+
+.contname1 .popname .done,
+.contname2 .popname .done {
+    background-color: black;
+    width: 125px;
+    height: 50px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #00dcff;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Enter Name2 */
+
+.lbl2,
+#n2,
+.contname2 .popname .done {
+    color: #2bf855;
+}
+
+/* Pop UP */
+.contpop {
+    position: absolute;
+    background-color: rgb(0 0 0 / 14%);
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.pop {
+    background-color: #c8cbe3;
+    height: 240px;
+    width: 500px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 20px;
+    display: none;
+}
+
+.cancel {
+    position: absolute;
+    top: -21px;
+    right: -21px;
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: red;
+    cursor: pointer;
+    user-select: none;
+}
+
+.pop p {
+    color: yellow;
+    font-size: 70px;
+    font-weight: bold;
+    user-select: none;
+}
+
+/* Players */
+.players {
+    width: 740px;
+    margin: 0px auto;
+    display: flex;
+    height: 24vh;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.players .player {
+    width: 48%;
+    background-color: rgb(0, 0, 0, 40%);
+    display: flex;
+    height: 100px;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.players .p2 {
+    flex-direction: row-reverse;
+}
+
+.players .player .image {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.players .player .image img {
+    width: 80px;
+    height: 80px;
+
+}
+
+.name1,
+.name2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    user-select: none;
+    overflow: hidden;
+    max-width: 200px;
+    width: fit-content;
+}
+
+.score1,
+.score2 {
+    font-weight: bold;
+    font-size: 40px;
+    color: #0029ffdb;
+    user-select: none;
+    width: 70px;
+}
+
+/* ReGame */
+.again {
+    padding: 12px 4px;
+    font-size: 17px;
+    border: none;
+    border-radius: 20px;
+    background-color: black;
+    color: #ffee00;
+    cursor: pointer;
+    opacity: 50%;
+    transition: 1s;
+    position: absolute;
+    top: 0px;
+    left: -42px;
+    display: none;
+}
+
+.again:hover {
+    opacity: 100%;
+    left: 0px;
+}
+
+@media (max-width:745px) {
+    .players {
+        width: 100%;
+    }
+
+    .cont {
+        width: 100%;
+        margin-bottom: 70px;
+    }
+
+    .cont .xo {
+        width: calc(100% / 3);
+    }
+
+    .again {
+        top: unset;
+        bottom: -77px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    .again:hover {
+        opacity: 100%;
+        left: 50%;
+    }
+}

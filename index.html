@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XO</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="cont">
+            <div class="xo" id="xo1">
+                <p></p>
+            </div>
+            <div class="xo" id="xo2">
+                <p></p>
+            </div>
+            <div class="xo" id="xo3">
+                <p></p>
+            </div>
+            <div class="xo" id="xo4">
+                <p></p>
+            </div>
+            <div class="xo" id="xo5">
+                <p></p>
+            </div>
+            <div class="xo" id="xo6">
+                <p></p>
+            </div>
+            <div class="xo" id="xo7">
+                <p></p>
+            </div>
+            <div class="xo" id="xo8">
+                <p></p>
+            </div>
+            <div class="xo" id="xo9">
+                <p></p>
+            </div>
+        </div>
+        <div class="contpop">
+            <div class="pop">
+                <p class="player"></p>
+                <div class="cancel">X</div>
+            </div>
+        </div>
+        <!-- Name1 -->
+        <div class="contname1">
+            <div class="popname">
+                <div class="names">
+                    <label class="lbl1" for="n1">Player1:</label>
+                    <input type="text" id="n1" minlength="5" maxlength="15">
+                </div>
+                <div class="done" id="d1">Done</div>
+            </div>
+        </div>
+        <!-- Name2 -->
+        <div class="contname2">
+            <div class="popname">
+                <div class="names">
+                    <label class="lbl2" for="n2">Player2:</label>
+                    <input type="text" id="n2" minlength="5" maxlength="15">
+                </div>
+                <div class="done" id="d2">Done</div>
+            </div>
+        </div>
+        <input type="button" class="again" value="Start New Game">
+    </div>
+    <div class="players">
+        <div class="player p1">
+            <div class="image">
+                <img src="./img/player1.png" alt="NoImage">
+            </div>
+            <p class="name1"></p>
+            <p class="score1"></p>
+        </div>
+        <div class="player p2">
+            <div class="image">
+                <img src="./img/player2.png" alt="NoImage">
+            </div>
+            <p class="name2"></p>
+            <p class="score2"></p>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
